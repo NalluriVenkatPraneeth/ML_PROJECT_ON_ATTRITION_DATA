@@ -1,0 +1,238 @@
+<html>
+    <head>
+        <style>
+            body {
+  align-items: center;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.form {
+  background-color: #15172b;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 800px;
+  padding: 20px;
+  width: 700px;
+}
+
+.title {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.subtitle {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.input-container {
+  height: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.ic1 {
+  margin-top: 40px;
+}
+
+.ic2 {
+  margin-top: 30px;
+}
+
+.input {
+  background-color: #303245;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 12px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+
+.cut {
+  background-color: #15172b;
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 30%;
+    text-align:center;
+}
+
+.cut-short2 {
+  width: 20%;
+}
+         
+            
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+
+.placeholder {
+  color: #65657b;
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
+    text-align:center;
+}
+
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+.input:not(:placeholder-shown) ~ .placeholder {
+  color: #808097;
+}
+
+.input:focus ~ .placeholder {
+  color: #dc2f55;
+}
+           
+
+.submit {
+  background-color: #08d;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 38px;
+  // outline: 0;
+  text-align: center;
+  width: 100px;
+}
+
+.submit:active {
+  background-color: #06b;
+}
+            
+a:link, a:visited {
+  background-color: #08d;
+  color: black;
+  border: 0;
+  border-radius: 12px;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-left: 80px;
+  // outline: 0;
+  width: 30%;
+  padding: 10px 20px;
+  position:relative;
+  text-align: center;
+  text-decoration: none;
+  display: inline;
+}
+
+a:hover, a:active {
+  background-color: #06b;
+  color: white;
+}
+            
+
+            
+
+
+        </style>
+
+    </head>
+    <body>
+        
+<form action="/submit" class="form" method="POST">
+    
+      <div class="title">Monthly Income Prediction
+          <a href="/home" align='right'>Back</a>
+    </div>
+      <div class="subtitle">Enter Details</div>
+      <div class="input-container ic1">
+          <select name="JL" class="input" name="JobLevel">
+   <option disabled selected value>--Job Level--</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+        <div class="cut"></div>
+        <label  class="placeholder">JobLevel</label>
+      </div>
+      <div class="input-container ic2">
+        <input name="TWH" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label class="placeholder">Total Working Hours</label>
+      </div>
+      <div class="input-container ic2">
+         <select class="input" name="DPT">
+   <option disabled selected>--Department--</option>
+  <option value="0">Human Resource</option>
+  <option value="1">Research and Development</option>
+  <option value="2">Sales</option>
+             </select>
+        <div class="cut"></div>
+        <label class="placeholder">Department</label>
+      </div>
+    <div class="input-container ic2">
+        <input name="YWCM" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label  class="placeholder">Years With Current Manager</label>
+      </div>
+    <div class="input-container ic2">
+        <select name="JR" class="input" name="JobRole">
+   <option disabled selected value>--Job Role--</option>
+  <option value="0">Healthcare Representative</option>
+  <option value="1">Human Resources</option>
+  <option value="2">Laboratory Technician</option>
+  <option value="3">Manager</option>
+  <option value="4">Manufacturing Director</option>
+  <option value="5">Research Director</option>
+  <option value="6">Research Scientist</option>
+  <option value="7">Sales Executive</option>
+  <option value="8">Sales Representative</option>
+</select>
+        <div class="cut"></div>
+        <label  class="placeholder">Job Role</label>
+      </div>
+    <div class="input-container ic2">
+        <input name="AGE" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label  class="placeholder">Age</label>
+      </div>
+    <div class="input-container ic2">
+        <input name="DFH" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label  class="placeholder">Dstance From Home</label>
+      </div>
+      <button type="text" class="submit">submit</button>
+    {% block content %}
+    
+    {% endblock %}
+    </form>
+        
+    </body>
+</html>
