@@ -12,4 +12,3 @@ Approach :
 Linear Regression For Regression Problem
 
 Decision Tree Classifier For Classification Problem
-Learnings
